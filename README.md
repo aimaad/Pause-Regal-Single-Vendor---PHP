@@ -1,154 +1,114 @@
-🖥️ Pause Regal – Single Vendor Dashboard (Admin Panel)
+# 🚚 Pause Regal – Vendor Rider App
 
-Pause Regal – Single Vendor Dashboard is the administration panel for the Pause Regal ecosystem.
-It allows the vendor to manage menu items, orders, delivery workflow, vendor settings, and analytics.
+Pause Regal – Vendor Rider App is the official delivery application used by riders to receive, manage, and deliver customer orders efficiently.  
+This app is part of the Pause Regal ecosystem, supporting a smooth end-to-end food ordering and delivery workflow for a single vendor.
 
-This project is built using PHP, JavaScript, CSS, and includes a full database SQL dump for easy setup.
+## 🧩 Pause Regal Ecosystem
 
-🧩 Pause Regal Ecosystem
+The complete Pause Regal solution contains:
 
-The complete Pause Regal system includes:
+### 🛠️ Vendor Admin Dashboard
+Where the vendor manages:
+- Menu items
+- Orders
+- Delivery assignments
+- Working hours
+- Payments & settings
 
-🍽️ Customer App – browse meals, place orders, set delivery addresses, and pay online.
+### 🍽️ Customer App
+- Customers browse dishes, place orders, select delivery addresses, and pay online.
 
-🚚 Rider App – receive delivery tasks, navigate routes, and update delivery status.
+### 🚚 Delivery Rider App (this repository)
+- Riders receive orders, navigate to customers, and update delivery status in real time.
 
-🖥️ Vendor Dashboard (this repository) – manage restaurant operations, menu, orders, riders, and settings.
+## 🚀 Features – Rider App
 
-🚀 Key Features
-📦 Order Management
+### 📦 Order Management
+- Receive new delivery tasks immediately
+- View order details (customer info, items, total, notes)
+- Accept or decline delivery tasks
 
-View real-time customer orders
+### 🗺️ Navigation
+- Integrated Google Maps
+- Step-by-step navigation to vendor location and customer address
+- Real-time location tracking
 
-Update order status: pending → processing → completed
+### 🔔 Status Updates
+Update order status:
+- On the way to vendor
+- Picked up
+- Out for delivery
+- Delivered  
 
-Assign orders to riders
+Vendor and customer receive real-time notifications.
 
-🍽️ Menu & Category Management
+### 👤 Rider Profile
+- Manage account information
+- View delivery history
+- Check performance and statistics (depending on backend)
 
-Add, update, delete meals
+## 🏗️ Tech Stack
+- Flutter (Dart)
+- Firebase (push notifications, API keys, analytics depending on your setup)
+- REST API for all backend communication
+- Google Maps SDK
+- Location & background tracking
 
-Set prices, images, descriptions, and availability
+## 📥 Installation & Setup
 
-Manage categories and subcategories
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/aimaad/Pause-Regal-Vender-Rider-App
+cd Pause-Regal-Vender-Rider-App
+```
+## 2️⃣ Move Files to Your Web Server
 
-🧑‍🍳 Vendor Settings
+**XAMPP :** place the project in `htdocs/`  
+**WAMP :** place the project in `www/`
 
-Update restaurant details
+Start **Apache** and **MySQL**
 
-Manage branch hours
+---
 
-Configure delivery fees
-
-📊 Reports & Analytics
-
-Sales reports
-
-Order history
-
-Best-selling items
-
-👥 Rider Management
-
-Add/edit riders
-
-Assign orders
-
-Track rider performance
-
-⚙️ API Integration
-
-The dashboard exposes APIs used by:
-
-Customer App
-
-Rider App
-
-API documentation files included in the repo:
-
-api-doc.txt
-
-rider-api-doc.txt
-
-🏗️ Tech Stack
-
-PHP – backend logic
-
-MySQL / MariaDB – database
-
-JavaScript / CSS / HTML – frontend
-
-Apache / Nginx support with .htaccess
-
-Custom MVC-style structure (application/ + system/)
-
-Built-in installer for database and configuration
-
-📥 Installation & Setup
-1️⃣ Clone the Repository
-git clone https://github.com/aimaad/Pause-Regal-Single-Vendor---PHP.git
-cd Pause-Regal-Single-Vendor---PHP
-
-2️⃣ Move Files to Your Web Server
-
-XAMPP: place the project in htdocs/
-
-WAMP: place the project in www/
-
-Start Apache and MySQL
-
-🗄️ Database Setup (Using Provided SQL)
+## 🗄️ Database Setup (Using Provided SQL)
 
 The repository includes a SQL dump for all required tables.
 
-1️⃣ Create a Database
+### 1️⃣ Create a Database
 
-Open phpMyAdmin and create a new database:
-
+Open **phpMyAdmin** and create a new database:
 pause_regal
 
-2️⃣ Import the SQL File
 
-Select the database.
+### 2️⃣ Import the SQL File
 
-Click Import.
-
-Upload the SQL file included in /database/pause_regal.sql.
-
-Click Go.
+- Select the database  
+- Click **Import**  
+- Upload: `/database/pause_regal.sql`  
+- Click **Go**
 
 ✅ This will create all tables, default groups (admin / members / rider), languages, branches, menu items, orders, carts, notifications, live tracking, API keys, and more.
 
-🔧 Configuration
+---
 
-Edit the database configuration in:
+### 🔧 Configuration
+
+Edit the database configuration file:
 
 application/config/database.php
+```bash
 
-
-Set your database credentials:
-
+```php
 'hostname' => 'localhost',
 'username' => 'root',
 'password' => '',
 'database' => 'pause_regal',
+```
+## ▶️ Access the Dashboard
 
-▶️ Access the Dashboard
-
-Open your browser and go to:
-
+Open your browser:
+```bash
 http://localhost/Pause-Regal/
+```
 
-
-Login with the admin account created during installation or via the default credentials in the SQL file if any.
-
-📁 Project Structure
-/
-├── application/       → Main application logic (controllers, models, views)
-├── system/            → Core system files
-├── assets/            → CSS, JS, images
-├── install/           → Installation wizard
-├── database/          → SQL dump file
-├── uploads/           → Uploaded images and media
-├── index.php          → Application entry point
-└── .htaccess          → URL rewriting and access control
+Login with the admin account created during installation or with the default credentials provided in the SQL file.
